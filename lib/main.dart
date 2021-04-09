@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:asuka/asuka.dart' show builder;
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'route/app_module.dart';
@@ -18,6 +19,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate
+      ],
+      supportedLocales: [
+        const Locale('vi'),
+      ],
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       title: "jh98",

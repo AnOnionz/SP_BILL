@@ -11,7 +11,7 @@ class AppModule extends Module {
   // Provide all the routes for your module
   @override
   final List<ModularRoute> routes = [
-    ModuleRoute('/', module: HomeModule(), transition: TransitionType.fadeIn),
+    ModuleRoute('/', module: HomeModule(), transition: TransitionType.size,),
     WildcardRoute(child: (_, args) => Container(
       child: Center(child: Text('404')),
     ),),

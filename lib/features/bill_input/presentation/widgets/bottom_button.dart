@@ -33,15 +33,18 @@ class BottomButton extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          ElevatedButton(
-            onPressed: (){},
-            child:
-            Text('Lưu & Tiếp tục', style: kWhiteSmallText,),
-            style: ElevatedButton.styleFrom(
-                primary: kGreenColor, // background
-                onPrimary: kGreenColor.withOpacity(0.3),
-                elevation: 0,
-                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16) // foreground
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: ElevatedButton(
+              onPressed: (){},
+              child:
+              Text('Lưu & Tiếp tục', style: kWhiteSmallText,),
+              style: ElevatedButton.styleFrom(
+                  primary: kGreenColor, // background
+                  onPrimary: kGreenColor.withOpacity(0.3),
+                  elevation: 0,
+                  padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16) // foreground
+              ),
             ),
           ),
         ],

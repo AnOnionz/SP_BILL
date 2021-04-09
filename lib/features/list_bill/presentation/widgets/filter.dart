@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ten_gi_cung_duoc/core/common/constants.dart';
+import 'package:ten_gi_cung_duoc/features/list_bill/presentation/widgets/dropdown_field.dart';
 import 'package:ten_gi_cung_duoc/features/list_bill/presentation/widgets/single_filed.dart';
+
+import 'date_time_field.dart';
 
 class Filter extends StatelessWidget {
 
@@ -12,15 +15,16 @@ class Filter extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 55),
       child: FractionallySizedBox(
-        widthFactor: 0.65,
+        widthFactor: 6/8,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            SingleField(label: 'ID phiếu mua', width: size.width/8,),
+            SingleField(label: 'ID phiếu', width: size.width/8,),
             SingleField(label: 'Outlet code',width: size.width/8),
-            SingleField(label: 'User nhập liệu',width: size.width/8, data: ['1','2'],),
-            SingleField(label: 'Tình trạng',width: size.width/8, data: ['1','2'],),
+            SingleField(label: 'Outlet Name',width: size.width/8,),
+            DateTimeField(label: 'Ngày',width: size.width/8),
+            DropdownField(label: 'Tình trạng',width: size.width/8, data: ['1','2'],),
             ElevatedButton(
               onPressed: (){},
               child:
@@ -31,7 +35,6 @@ class Filter extends StatelessWidget {
                       elevation: 0,
                       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16) // foreground
             ),
-
             ),
           ],
         ),

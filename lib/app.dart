@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ten_gi_cung_duoc/core/nav_cubit.dart';
-import 'core/widgets/nav.dart';
-import 'features/list_bill/presentation/screens/dspm.dart';
-import 'tab.dart';
+import 'features/asign_bill/presentations/screens/pbpm.dart';
+
 import 'responsive.dart';
 
 class MyApp extends StatelessWidget {
@@ -12,7 +9,7 @@ class MyApp extends StatelessWidget {
     return Responsive(
       mobile: Container(),
       tablet: Container(),
-      desktop: Container()
+      desktop: PBPM()
     );
   }
 }

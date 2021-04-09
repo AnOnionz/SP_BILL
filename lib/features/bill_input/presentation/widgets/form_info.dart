@@ -14,7 +14,7 @@ class FormInfo extends StatelessWidget {
         children: [
           Image.asset('assets/images/play.png', height: 15.4,),
           const SizedBox(width: 19.0,),
-          Text('Bill ID: ${bill.id}',style: kBlackSmallText,),
+          Text('ID Phiếu: ${bill.id}',style: kBlackSmallText,),
           const SizedBox(width: 42.0,),
           Text('Outlet Code: ${bill.outletCode}',style: kBlackSmallText,),
           Spacer(),

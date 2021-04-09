@@ -59,6 +59,10 @@ const kTabTitleText = TextStyle(
     color: Colors.black,
     fontSize: 25
 );
+const kRedSmallText = TextStyle(
+    color: kRedColor,
+    fontSize: 20
+);
 
 //bill status
 const int SUCCESS = 1;
