@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:ten_gi_cung_duoc/core/common/constants.dart';
+import '../../core/common/constants.dart';
 
 class SingleField  extends StatelessWidget {
   final String label;

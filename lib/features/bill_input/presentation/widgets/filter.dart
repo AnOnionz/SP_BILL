@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ten_gi_cung_duoc/core/common/constants.dart';
-import 'package:ten_gi_cung_duoc/features/list_bill/presentation/widgets/single_filed.dart';
+import '../../../../core/common/constants.dart';
+import '../../../../core/widgets/single_filed.dart';
 
 class FilterCO extends StatelessWidget {
   @override

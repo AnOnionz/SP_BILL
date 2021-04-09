@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_modular/flutter_modular.dart';
-import 'package:ten_gi_cung_duoc/core/common/constants.dart';
-import 'package:ten_gi_cung_duoc/core/widgets/data_table.dart';
-import 'package:ten_gi_cung_duoc/core/widgets/header.dart';
-import 'package:ten_gi_cung_duoc/features/list_bill/presentation/widgets/single_filed.dart';
-import '../../../../core/widgets/tab_title.dart';
+import '../../../../core/common/constants.dart';
+import '../../../../core/widgets/data_table.dart';
+import '../../../../core/widgets/single_filed.dart';
+
 import '../../../../features/bill_input/domain/entiies/outlet.dart';
 
 class PBPMDialog extends StatelessWidget {
