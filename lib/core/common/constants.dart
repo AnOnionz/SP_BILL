@@ -31,6 +31,10 @@ const kWhiteSmallText = TextStyle(
     color: Colors.white,
     fontSize: 15
 );
+const kWhiteSmallSmallText = TextStyle(
+    color: Colors.white,
+    fontSize: 13
+);
 const kBlackText = TextStyle(
     color: Colors.black,
     fontSize: 17
@@ -51,6 +55,10 @@ const kBlackBigText = TextStyle(
     color: Colors.black,
     fontSize: 20,
 );
+const kRedSmallText = TextStyle(
+    color: kRedColor,
+    fontSize: 13
+);
 const kRedText = TextStyle(
     color: kRedColor,
     fontSize: 15
@@ -59,7 +67,7 @@ const kTabTitleText = TextStyle(
     color: Colors.black,
     fontSize: 25
 );
-const kRedSmallText = TextStyle(
+const kRedBigText = TextStyle(
     color: kRedColor,
     fontSize: 20
 );

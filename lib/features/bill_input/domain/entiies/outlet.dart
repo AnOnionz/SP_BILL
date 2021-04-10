@@ -5,8 +5,9 @@ class Outlet{
   final int totalBill;
   final int billCompletedCount;
   final int billNoCompletedCount;
+  final int? status;
 
-  Outlet({required this.id,required this.outletName,required this.outletCode, required this.totalBill,required this.billCompletedCount,required this.billNoCompletedCount});
+  Outlet({this.status, required this.id,required this.outletName,required this.outletCode, required this.totalBill,required this.billCompletedCount,required this.billNoCompletedCount});
 
 
 }

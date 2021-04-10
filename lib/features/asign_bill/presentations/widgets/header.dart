@@ -14,7 +14,7 @@ class Header extends StatelessWidget {
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: headerData.entries.map((e) => Container( width: width /e.value, child: e.value != '' ? Text(e.key, style: kBlackSmallText,) : const SizedBox()),).toList(),
+          children: headerData.entries.map((e) => Container( width: width /e.value, child: e.key != '' ? Text(e.key, style: kBlackSmallText,) : const SizedBox()),).toList(),
         ),
         Divider(color: kGreyColor,),
       ],

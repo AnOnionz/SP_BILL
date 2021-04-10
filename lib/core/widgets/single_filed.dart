@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import '../../core/common/constants.dart';
+import '../common/constants.dart';
 
 class SingleField  extends StatelessWidget {
   final String label;
@@ -8,8 +8,7 @@ class SingleField  extends StatelessWidget {
   final bool small;
   final bool? disable;
 
-  const SingleField({Key? key, required this.label, required this.width, this.small = false, this.disable }) : super(key: key);
-
+  const SingleField({Key? key, required this.label, required this.width, this.small = false, this.disable= false}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +23,7 @@ class SingleField  extends StatelessWidget {
             height: 37,
             width: width,
             child: TextFormField(
+              enabled: !disable!,
               decoration: InputDecoration(
                 filled: true,
                 fillColor:  Colors.white,
@@ -35,9 +35,24 @@ class SingleField  extends StatelessWidget {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5.0),
                   borderSide: BorderSide(
-                    color: kGreyColor.withOpacity(0.5),
+                    color: kGreyColor.withOpacity(0.9),
                     width: 1,
+                    style: BorderStyle.none
                   )
+                ),
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5.0),
+                    borderSide: BorderSide(
+                        color: kGreyColor,
+                        width: 1,
+                    )
+                ),
+                disabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5.0),
+                    borderSide: BorderSide(
+                      color: kGreyColor,
+                      width: 1,
+                    )
                 ),
                 errorBorder:OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5.0),

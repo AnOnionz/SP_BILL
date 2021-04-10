@@ -6,6 +6,9 @@ import 'package:ten_gi_cung_duoc/core/common/constants.dart';
 import 'package:ten_gi_cung_duoc/features/bill_input/presentation/widgets/single_form.dart';
 
 class BillInputForm extends StatefulWidget {
+  final dynamic? data;
+
+  const BillInputForm({Key? key, this.data}) : super(key: key);
   @override
   _BillInputFormState createState() => _BillInputFormState();
 }

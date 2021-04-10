@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import '../../../../core/widgets/hover_button.dart';
 import '../../../../features/bill_input/presentation/widgets/filter.dart';
 import '../../../../features/bill_input/domain/entiies/outlet.dart';
 import '../../../../core/common/constants.dart';
@@ -65,7 +66,7 @@ class CO extends StatelessWidget {
                       shrinkWrap: true,
                       separatorBuilder: (context, index) => Divider(color: kGreyColor,),
                       itemBuilder:(context, index) => Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10.0),
+                        padding: const EdgeInsets.symmetric(vertical: 7.0),
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -77,13 +78,19 @@ class CO extends StatelessWidget {
                               Container( width: size.width /7.5, child: Text(outlets[index].totalBill.toString(), style: kBlackSmallText,)),
                               Container( width: size.width /7.5, child: Text(outlets[index].billCompletedCount.toString(), style: kBlackSmallText,)),
                               Container( width: size.width /7.5, child: Text(outlets[index].billNoCompletedCount.toString(), style: kBlackSmallText,)),
-                              Container( width: size.width /15, child: Center(child: TextButton(onPressed: (){
-                                Modular.to.pushNamed('/bill-input/${outlets[index].id} ${Random().nextInt(8)}');
-                              }, child: Image.asset('assets/images/edit.png', height: 16, width: 16,),))),
-                                ],
+                              Container( width: size.width /15, child: Center(child:
+                              HoverButton(
+                                onPressed: (){
+                                  Modular.to.pushNamed('/bill-input/${outlets[index].id} ${Random().nextInt(8)}');
+                                },
+                                icon: Image.asset('assets/images/edit.png', height: 16, width: 16,),
+                                onActive: Image.asset('assets/images/edit_hover.png', height: 16, width: 16,),
                               ),
                               ),
-
+                              ),
+                        ]
+                      ),
+                      )
                         ),
                       )
                 ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ten_gi_cung_duoc/core/common/constants.dart';
-import 'package:ten_gi_cung_duoc/core/widgets/logout_btn.dart';
-import 'package:ten_gi_cung_duoc/core/widgets/user_info.dart';
+import '../../core/common/constants.dart';
+import '../../core/widgets/logout_btn.dart';
+import '../../core/widgets/user_info.dart';
 
 import 'menu_item.dart';
 
@@ -26,8 +26,8 @@ class NavBar extends StatelessWidget {
           ),
           MenuItem(title: 'Nhập phiếu mua', route: '/select-outlet', isActive: index == 1,),
           MenuItem(title: 'Danh sách phiếu mua',route: '/list-bill',isActive: index == 2),
-          MenuItem(title: 'Phân bổ outlet', route: '/asign-outlet',isActive: index == 3),
           MenuItem(title: 'Phân bổ phiếu mua', route: '/asign-bill', isActive: index == 4,),
+          MenuItem(title: 'Thống kê', route: '/statistic', isActive: index == 5,),
           const Spacer(),
           UserInfo(name: userName),
           LogoutButton(onPressed: (){}),

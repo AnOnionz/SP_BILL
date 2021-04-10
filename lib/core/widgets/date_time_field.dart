@@ -54,7 +54,8 @@ class _DateTimeFieldState extends State<DateTimeField> {
               }
             },
             decoration: InputDecoration(
-              focusColor: kGreyColor.withOpacity(0.3),
+              filled: true,
+              fillColor:  Colors.white,
               suffixIcon: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child:Icon(Icons.date_range_outlined, size: 25, color: Colors.black45,),
@@ -64,6 +65,13 @@ class _DateTimeFieldState extends State<DateTimeField> {
                   borderRadius: BorderRadius.circular(5.0),
                   borderSide: BorderSide(
                     color: kGreyColor.withOpacity(0.3),
+                    width: 1,
+                  )
+              ),
+              enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                  borderSide: BorderSide(
+                    color: kGreyColor,
                     width: 1,
                   )
               ),

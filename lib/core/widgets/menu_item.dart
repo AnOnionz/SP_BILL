@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:ten_gi_cung_duoc/core/common/constants.dart';
+import '../../core/common/constants.dart';
 
-import 'nav.dart';
 
 class MenuItem extends StatelessWidget {
   final String title;

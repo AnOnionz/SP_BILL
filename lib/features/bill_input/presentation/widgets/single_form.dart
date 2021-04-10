@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:ten_gi_cung_duoc/core/common/constants.dart';
-import 'package:ten_gi_cung_duoc/core/widgets/dropdown_field.dart';
+import '../../../../core/common/constants.dart';
+import '../../../../core/widgets/dropdown_field.dart';
 import '../../../../core/widgets/single_filed.dart';
 
+// ignore: must_be_immutable
 class SingleForm extends StatelessWidget {
   final bool isFirst;
   VoidCallback? onDelete;
@@ -16,17 +17,10 @@ class SingleForm extends StatelessWidget {
     final size =MediaQuery.of(context).size;
 
     return Padding(
-      padding: EdgeInsets.only(top: size.height/32),
+      padding: EdgeInsets.only(top: size.height/35),
       child: Container(
         child: Column(
           children: [
-            !isFirst ? Align(
-              alignment: Alignment.topRight,
-              child: InkWell(
-                onTap: onDelete??(){},
-              child: Text('Xóa sản phẩm', style: kRedText,)),
-            ): const SizedBox(),
-            const SizedBox(height: 17,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -38,6 +32,13 @@ class SingleForm extends StatelessWidget {
                 SingleField(label: 'Tổng tiền', width: size.width / 12 - 20, small: true, disable: true,),
               ],
             ),
+            const SizedBox(height: 17,),
+            !isFirst ? Align(
+              alignment: Alignment.bottomRight,
+              child: InkWell(
+                  onTap: onDelete??(){},
+                  child: Text('Xóa sản phẩm', style: kRedSmallText,)),
+            ): const SizedBox(),
             const SizedBox(height: 19.0,),
           ],
         ),

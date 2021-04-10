@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import '../../../../core/widgets/hover_button.dart';
+import '../../../../features/asign_bill/presentations/screens/pbpm_list_dialog.dart';
 import '../../../../core/common/constants.dart';
 import '../../../../core/widgets/data_table.dart';
 import '../../../../features/asign_bill/domain/user.dart';
@@ -58,7 +61,7 @@ class PBPM extends StatelessWidget {
                     shrinkWrap: true,
                     separatorBuilder: (context, index) => Divider(color: kGreyColor,),
                     itemBuilder:(context, index) => Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      padding: const EdgeInsets.symmetric(vertical: 7.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -71,7 +74,8 @@ class PBPM extends StatelessWidget {
                           Container( width: size.width /7, child: Text(users[index].noCompletedBillCount.toString(), style: kBlackSmallText,)),
                           Container( width: size.width /12, child: Row(
                             children: [
-                              TextButton(onPressed: (){
+                              TextButton(
+                                onPressed: (){
                                 asuka.showDialog(
                                   barrierDismissible: false,
                                   builder: (context) {
@@ -80,10 +84,26 @@ class PBPM extends StatelessWidget {
                                       child: PBPMDialog()
                                     );
                                   },);
-                              }, child: Image.asset('assets/images/allocated.png', height: 16, width: 16,),),
-                              TextButton(onPressed: (){
-                                // Modular.to.pushNamed('/bill-input/${users[index].id} ${Random().nextInt(8)}');
-                              }, child: Image.asset('assets/images/asigned.png', height: 16, width: 16,),),
+                              },
+                                child: Image.asset('assets/images/allocated.png', height: 16, width: 16,),
+                                style: TextButton.styleFrom(
+                                  minimumSize: Size(40,40)
+                                )
+                              ),
+                              HoverButton(
+                                onPressed: (){
+                                  asuka.showDialog(
+                                    barrierDismissible: false,
+                                    builder: (context) {
+                                      return ConstrainedBox(
+                                          constraints: BoxConstraints(maxHeight: size.height*0.6),
+                                          child: PBPMListDialog()
+                                      );
+                                    },);
+                                },
+                                icon: Image.asset('assets/images/asign.png', height: 16, width: 16,),
+                                onActive: Image.asset('assets/images/asign_hover.png', height: 16, width: 16,),
+                              ),
                         ],
                       ),
                     ),
